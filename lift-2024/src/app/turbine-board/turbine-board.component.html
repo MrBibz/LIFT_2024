@@ -1,19 +1,28 @@
 <div class="turbine-board container-fluid mx-auto">
-    <div class="row">
-        <div class="col-5 mx-auto bg-light mt-3 rounded border border-dark border-3">
-            <div class="row">
-                <h1 class="text-center">Turbine Board</h1>
-            </div>
-            <div class="row" *ngFor="let eolienne of eoliennes">
-                <div class="row mb-2 text-center">
-                    <h3>{{ eolienne.nom }} - <span class="rounded p-1 text-light" [ngClass]="{
-                        'bg-danger': eolienne.etat === 'danger',
-                        'bg-warning': eolienne.etat === 'warning',
-                        'bg-success': eolienne.etat === 'running',
-                        'bg-dark': eolienne.etat === 'stopped'
-                    }"><a>{{ eolienne.etat }}</a></span></h3>
-                </div>
-            </div>
+  <div class="row">
+    <div
+      class="col-5 mx-auto bg-light mt-3 rounded border border-dark border-3"
+    >
+      <div class="row">
+        <h1 class="text-center">Turbine Board</h1>
+      </div>
+      <div class="row" *ngFor="let eolienne of eoliennes">
+        <div class="row mb-2 text-center">
+          <h3>
+            {{ eolienne.nom }} -
+            <span
+              class="states rounded p-1 text-light"
+              [ngClass]="{
+                'bg-danger': eolienne.etat === 'danger',
+                'bg-warning': eolienne.etat === 'warning',
+                'bg-success': eolienne.etat === 'running',
+                'bg-dark': eolienne.etat === 'stopped'
+              }"
+              ><a routerLink="">{{ eolienne.etat }}</a></span
+            >
+          </h3>
         </div>
+      </div>
     </div>
+  </div>
 </div>
