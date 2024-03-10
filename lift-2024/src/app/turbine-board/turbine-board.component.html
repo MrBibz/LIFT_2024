@@ -1,7 +1,7 @@
 <div class="turbine-board container-fluid mx-auto">
   <div class="row">
     <div
-      class="col-5 mx-auto bg-light mt-3 rounded border border-dark border-3"
+      class="col-10 col-sm-7 col-lg-5 mx-auto bg-light mt-3 rounded border border-dark border-3"
     >
       <div class="row">
         <h1 class="text-center">Turbine Board</h1>
@@ -18,10 +18,12 @@
                 'bg-success': eolienne.etat === 'running',
                 'bg-dark': eolienne.etat === 'stopped'
               }"
-              ><a 
-              (mouseover)="setOnDetails(i)"
-              (mouseout)="resetOnDetails(i)"
-              [routerLink]="['/turbines', eolienne.id]">{{ onDetails[i] ? "Details" : eolienne.etat}}</a></span
+              ><a
+                (mouseover)="setOnDetails(i)"
+                (mouseout)="resetOnDetails(i)"
+                [routerLink]="['/turbines', eolienne.id]"
+                >{{ onDetails[i] ? "Details" : eolienne.etat }}</a
+              ></span
             >
           </h3>
         </div>

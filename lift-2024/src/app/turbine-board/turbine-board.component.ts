@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Eolienne } from '../interfaces/eolienne';
 import hard_coded_eoliennes from '../fake_data/hard_coded';
+
 @Component({
   selector: 'app-turbine-board',
   templateUrl: './turbine-board.component.html',
