@@ -21,7 +21,7 @@
               ><a 
               (mouseover)="setOnDetails(i)"
               (mouseout)="resetOnDetails(i)"
-              routerLink="">{{ onDetails[i] ? "Details" : eolienne.etat}}</a></span
+              [routerLink]="['/turbines', eolienne.id]">{{ onDetails[i] ? "Details" : eolienne.etat}}</a></span
             >
           </h3>
         </div>
