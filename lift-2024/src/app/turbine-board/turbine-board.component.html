@@ -6,7 +6,7 @@
       <div class="row">
         <h1 class="text-center">Turbine Board</h1>
       </div>
-      <div class="row" *ngFor="let eolienne of eoliennes">
+      <div class="row" *ngFor="let eolienne of eoliennes; let i = index">
         <div class="row mb-2 text-center">
           <h3>
             {{ eolienne.nom }} -
@@ -18,7 +18,10 @@
                 'bg-success': eolienne.etat === 'running',
                 'bg-dark': eolienne.etat === 'stopped'
               }"
-              ><a routerLink="">{{ eolienne.etat }}</a></span
+              ><a 
+              (mouseover)="setOnDetails(i)"
+              (mouseout)="resetOnDetails(i)"
+              routerLink="">{{ onDetails[i] ? "Details" : eolienne.etat}}</a></span
             >
           </h3>
         </div>

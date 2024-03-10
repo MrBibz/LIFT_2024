@@ -9,5 +9,13 @@ import hard_coded_eoliennes from '../fake_data/hard_coded';
 export class TurbineBoardComponent {
 
   eoliennes: Eolienne[] = hard_coded_eoliennes;
+  onDetails: { [index: number]: boolean } = {};
 
+  setOnDetails(index: number) {
+    this.onDetails[index] = true;
+  }
+
+  resetOnDetails(index: number) {
+    this.onDetails[index] = false;
+  }
 }

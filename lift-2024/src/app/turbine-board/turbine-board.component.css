@@ -22,6 +22,7 @@
 
 span a:hover {
 	font-weight: bold;
+	cursor : pointer;
 }
 
 span a {
